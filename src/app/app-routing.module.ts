@@ -1,14 +1,14 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {NgplYearPickerTestComponent} from './app-test/ngpl-year-picker-test/ngpl-year-picker-test.component';
+import {NgplFieldTestComponent} from './app-test/ngpl-field-test/ngpl-field-test.component';
 
 const routes: Routes = [
   {
-    path: 'ngpl-year-picker',
-    component: NgplYearPickerTestComponent
+    path: 'ngpl-field',
+    component: NgplFieldTestComponent
   }, {
     path: '**',
-    component: NgplYearPickerTestComponent
+    component: NgplFieldTestComponent
   }
 ];
 

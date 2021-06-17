@@ -1,0 +1,85 @@
+<section>
+  <div>
+    <mat-checkbox [formControl]="disableControl" class="mr-3">
+      Disable Control
+    </mat-checkbox>
+    <mat-checkbox [formControl]="readOnlyControl" class="mr-3">
+      ReadOnly Control
+    </mat-checkbox>
+    <mat-checkbox [formControl]="loadingControl" class="mr-3">
+      Show Loading
+    </mat-checkbox>
+  </div>
+  <form [formGroup]="formGroup" fxLayout="column">
+    <div fxLayout fxLayoutAlign="space-around">
+      <ngpl-field
+        [ngplDisableControl]="disableControl.value"
+        [readOnlyControl]="readOnlyControl.value"
+        [showLoading]="loadingControl.value"
+        formControlName="field1"
+        ngplWidth="250px"
+        placeHolder="Text 1">
+
+      </ngpl-field>
+
+      <ngpl-field
+        [ngplDisableControl]="disableControl.value"
+        [readOnlyControl]="readOnlyControl.value"
+        [showLoading]="loadingControl.value"
+        formControlName="field2"
+        ngplWidth="250px"
+        placeHolder="Text 2">
+
+      </ngpl-field>
+      <ngpl-field
+        [readOnlyControl]="readOnlyControl.value"
+        [showLoading]="loadingControl.value"
+        formControlName="field3"
+        ngplWidth="250px"
+        placeHolder="Text 3">
+
+      </ngpl-field>
+
+    </div>
+    <div fxLayout fxLayoutAlign="space-around">
+      <ngpl-field
+        [ngplDisableControl]="disableControl.value"
+        [readOnlyControl]="readOnlyControl.value"
+        [showLoading]="loadingControl.value"
+        formControlName="field4"
+        ngplWidth="250px"
+        type="number"
+        placeHolder="Number 1">
+
+      </ngpl-field>
+      <ngpl-field
+        [ngplDisableControl]="disableControl.value"
+        [readOnlyControl]="readOnlyControl.value"
+        [showLoading]="loadingControl.value"
+        formControlName="field5"
+        ngplWidth="250px"
+        type="number"
+        placeHolder="Number 2">
+
+      </ngpl-field>
+      <ngpl-field
+        [readOnlyControl]="readOnlyControl.value"
+        [showLoading]="loadingControl.value"
+        formControlName="field6"
+        ngplWidth="250px"
+        type="number"
+        placeHolder="Number 3">
+
+      </ngpl-field>
+
+    </div>
+
+  </form>
+
+  <div fxLayout="" fxLayoutAlign="space-around">
+    <pre>{{formGroup.value | json}}</pre>
+    <pre>{{formGroup.getRawValue() | json}}</pre>
+  </div>
+
+
+</section>

@@ -1,0 +1,25 @@
+<mat-form-field class="widget-field-mat-form-field {{customClass}}" [appearance]="appearance"
+                [color]="color"
+                [appearance]="appearance"
+                [floatLabel]="showLoading ? 'always' : floatLabel"
+
+>
+  <mat-label>{{placeHolder}}</mat-label>
+	<ngpl-skeleton *ngIf="type==='text'" [width]="showLoadingWidth" [height]="showLoadingHeight"  [isLoading]="showLoading">
+		<input matInput ngDefaultControl
+           [ngplDisableControl]="disabledControl"
+           [readOnly]="readOnlyControl"
+           [autocomplete]="autocomplete"
+		       [formControl]="inputControl">
+	</ngpl-skeleton>
+	<ngpl-skeleton *ngIf="type==='number'" [width]="showLoadingWidth" [height]="showLoadingHeight"  [isLoading]="showLoading">
+		<input matInput ngDefaultControl
+           [ngplDisableControl]="disabledControl"
+           [readOnly]="readOnlyControl"
+           [autocomplete]="autocomplete"
+		       [formControl]="inputControl"
+           type="number">
+	</ngpl-skeleton>
+	<mat-icon matPrefix *ngIf="!!iconPreffix">{{iconPreffix}}</mat-icon>
+	<mat-icon matSuffix *ngIf="!!iconSuffix">{{iconSuffix}}</mat-icon>
+</mat-form-field>

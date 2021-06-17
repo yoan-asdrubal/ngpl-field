@@ -8,10 +8,10 @@ import {OverlayModule} from '@angular/cdk/overlay';
 import {NgplCommonDirectivesModule, NgplCommonModule} from 'ngpl-common';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import {NgplYearPickerComponent} from './ngpl-year-picker/ngpl-year-picker.component';
+import {NgplFieldComponent} from './ngpl-field/ngpl-field.component';
 
 const components = [
-  NgplYearPickerComponent
+  NgplFieldComponent
 ];
 
 @NgModule({
@@ -23,12 +23,10 @@ const components = [
     MatInputModule,
     ReactiveFormsModule,
     MatIconModule,
-    MatDatepickerModule,
     MatTooltipModule,
-    OverlayModule,
     NgplCommonModule,
     NgplCommonDirectivesModule
   ]
 })
-export class NgplYearPickerModule {
+export class NgplFieldModule {
 }
