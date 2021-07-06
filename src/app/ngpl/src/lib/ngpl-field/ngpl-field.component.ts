@@ -12,7 +12,7 @@ import {
 import {ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR} from '@angular/forms';
 import {tap} from 'rxjs/operators';
 import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
-import {NGPL_FILTER_BASE} from 'ngpl-common';
+import {NGPL_FILTER_BASE, NgplFilterBase} from 'ngpl-filter';
 
 @UntilDestroy()
 @Component({
@@ -33,7 +33,7 @@ import {NGPL_FILTER_BASE} from 'ngpl-common';
     }
   ]
 })
-export class NgplFieldComponent implements OnInit, OnDestroy, ControlValueAccessor {
+export class NgplFieldComponent implements OnInit, OnDestroy, ControlValueAccessor, NgplFilterBase {
   @Input() type: 'text' | 'number' = 'text';
 
   @Input() placeHolder = '';

@@ -9,6 +9,7 @@ import {NgplCommonDirectivesModule, NgplCommonModule} from 'ngpl-common';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {NgplFieldComponent} from './ngpl-field/ngpl-field.component';
+import {NgplFilterModule} from 'ngpl-filter';
 
 const components = [
   NgplFieldComponent
@@ -25,6 +26,7 @@ const components = [
     MatIconModule,
     MatTooltipModule,
     NgplCommonModule,
+    NgplFilterModule,
     NgplCommonDirectivesModule
   ]
 })
